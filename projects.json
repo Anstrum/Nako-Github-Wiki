@@ -1,0 +1,270 @@
+[
+  {
+    "id": "omen-wing-legion",
+    "title": "Omen Wing Legion [OWL]",
+    "tagline": "Bâtir une légion, un univers communautaire et un écosystème de jeux & d'outils interconnectés.",
+    "status": "in-progress",
+    "progress": 45,
+    "featured": true,
+    "flagship": true,
+    "version": "v0.5.0-alpha",
+    "collaboration": "solo",
+    "ai_usage": "research",
+    "image": "assets/images/owl-emblem.png",
+    "description": "Omen Wing Legion [OWL] est mon projet majeur d'envergure. Conçu pour fédérer une communauté passionnée de joueurs, créateurs et développeurs autour d'un univers immersif et d'expériences partagées. L'ambition est d'associer un lore captivant, des bots interactifs, des outils collaboratifs et des modules de jeu sous un même étendard emblématique.",
+    "technologies": ["Communauté", "Discord API", "Node.js", "Lua", "Game Design", "Lore Engine"],
+    "links": {
+      "github": "https://github.com/Anstrum",
+      "community": "https://github.com/Anstrum"
+    },
+    "dates": {
+      "started": "2025-08",
+      "lastUpdate": "2026-11"
+    },
+    "highlights": [
+      "Emblème mystique de la chouette aux ailes déployées et yeux cyan incandescents",
+      "Vision communautaire unifiée liant univers narratif, bots et jeux indépendants",
+      "Fondations solides pour accueillir de futurs collaborateurs et membres"
+    ]
+  },
+  {
+    "id": "nako-hub",
+    "title": "Nako Project Vault & Hub",
+    "tagline": "Portail centralisé de recensement, suivi d'état et vitrine des créations de l'univers Nako.",
+    "status": "completed",
+    "progress": 100,
+    "featured": true,
+    "flagship": false,
+    "version": "v1.0.0",
+    "collaboration": "solo",
+    "ai_usage": "assisted-code",
+    "image": "assets/images/nako-logo.png",
+    "description": "Site vitrine et catalogue interactif hébergé sur GitHub Pages permettant d'explorer l'intégralité des projets avec des filtres multicritères par toggles catégorisés (statut, utilisation de l'IA, technologies, collaboration), recherche instantanée et bascule de thème sombre/clair.",
+    "technologies": ["HTML5", "CSS3 Modern", "Vanilla JavaScript", "GitHub Pages"],
+    "links": {
+      "github": "https://github.com/Anstrum/Nako-Github-Wiki",
+      "demo": "https://anstrum.github.io/Nako-Github-Wiki/"
+    },
+    "dates": {
+      "started": "2026-11",
+      "lastUpdate": "2026-11"
+    },
+    "highlights": [
+      "Zéro étape de build, hébergement natif et instantané sur GitHub Pages",
+      "Système de filtres par toggles catégorisés réactifs (Logique ET multi-facettes)",
+      "Design soigné combinant l'ambiance Nako (Crimson) et OWL (Cyber Teal)",
+      "Générateur de projet JSON intégré pour des ajouts rapides en un clic"
+    ]
+  },
+  {
+    "id": "neon-dash",
+    "title": "Neon Dash",
+    "tagline": "Jeu d'action/plateforme 2D cyberpunk en mégapole verticale avec exosquelette modulaire.",
+    "status": "in-progress",
+    "progress": 65,
+    "featured": true,
+    "flagship": false,
+    "version": "v0.7.0",
+    "collaboration": "solo",
+    "ai_usage": "assisted-code",
+    "image": "",
+    "description": "Jeu de plateforme et d'action 2D en low-poly procédural où vous incarnez un coursier clandestin livrant sous haute tension dans une mégapole cyberpunk verticale, propulsé par un système d'exosquelette entièrement modulaire.",
+    "technologies": ["Lua", "LÖVE 2D", "Génération Procédurale", "Game Dev"],
+    "links": {
+      "github": "https://github.com/Anstrum/neon-dash"
+    },
+    "dates": {
+      "started": "2026-05",
+      "lastUpdate": "2026-09"
+    },
+    "highlights": [
+      "Maniabilité nerveuse et gameplay vertical dynamique",
+      "Génération procédurale de niveaux pour une rejouabilité infinie",
+      "Système d'améliorations et de modules d'exosquelette"
+    ]
+  },
+  {
+    "id": "archimage-sanctuary-td",
+    "title": "Archimage Sanctuary TD",
+    "tagline": "Hybride novateur associant gestion de colonie idle et tower defense en temps réel.",
+    "status": "in-progress",
+    "progress": 80,
+    "featured": false,
+    "flagship": false,
+    "version": "v0.9.2",
+    "collaboration": "solo",
+    "ai_usage": "none",
+    "image": "",
+    "description": "Dual-gameplay hybrid game combining idle colony management and real-time tower defense, développé avec LÖVE 2D en Lua. Bâtissez votre sanctuaire, optimisez la production de mana et repoussez les vagues d'assaillants avec des sorts dévastateurs.",
+    "technologies": ["Lua", "LÖVE 2D", "Tower Defense", "Gestion"],
+    "links": {
+      "github": "https://github.com/Anstrum/archimage-sanctuary-td"
+    },
+    "dates": {
+      "started": "2026-03",
+      "lastUpdate": "2026-09"
+    },
+    "highlights": [
+      "Double boucle de gameplay : gestion passive et tactique active",
+      "Arbre de sorts et synergies élémentaires approfondies",
+      "Développement 100% fait main en Lua pur"
+    ]
+  },
+  {
+    "id": "altars-in-outworld",
+    "title": "Altars in Outworld",
+    "tagline": "MMO indépendant où vous tentez l'ascension au sein d'une communauté soudée.",
+    "status": "paused",
+    "progress": 40,
+    "featured": false,
+    "flagship": false,
+    "version": "v0.3.0-prototype",
+    "collaboration": "team",
+    "ai_usage": "none",
+    "image": "",
+    "description": "Altars in Outworld est un MMO invitant les joueurs à explorer un univers mystique, coopérer pour ériger des autels sacrés et participer à une communauté grandissante.",
+    "technologies": ["JavaScript", "Node.js", "WebSockets", "MMO Architecture"],
+    "links": {
+      "github": "https://github.com/Anstrum/altars-in-outworld"
+    },
+    "dates": {
+      "started": "2023-04",
+      "lastUpdate": "2023-08"
+    },
+    "highlights": [
+      "Système d'autels coopératifs et progression d'alliance",
+      "Synchronisation multi-joueurs temps réel par WebSockets"
+    ]
+  },
+  {
+    "id": "pixelwars",
+    "title": "PixelWars",
+    "tagline": "Canevas collaboratif pixel-art temps réel style r/place avec Node.js & Socket.io.",
+    "status": "completed",
+    "progress": 100,
+    "featured": false,
+    "flagship": false,
+    "version": "v1.1.0",
+    "collaboration": "solo",
+    "ai_usage": "none",
+    "image": "",
+    "description": "PixelWars est un projet complet permettant d'héberger des sessions type r/Place pour de multiples utilisateurs avec actualisation en temps réel via Socket.io et stockage d'état résilient.",
+    "technologies": ["JavaScript", "Node.js", "Socket.io", "HTML5 Canvas"],
+    "links": {
+      "github": "https://github.com/Anstrum/PixelWars"
+    },
+    "dates": {
+      "started": "2023-03",
+      "lastUpdate": "2023-05"
+    },
+    "highlights": [
+      "Gestion d'un canvas interactif haute fréquence",
+      "Cooldown dynamique de placement de pixel et anti-triche"
+    ]
+  },
+  {
+    "id": "twinned-spirits",
+    "title": "Twinned Spirits",
+    "tagline": "Jeu coopératif 2D mêlant stratégie mystique, artefacts sacrés et die-and-retry.",
+    "status": "paused",
+    "progress": 55,
+    "featured": false,
+    "flagship": false,
+    "version": "v0.4.5",
+    "collaboration": "team",
+    "ai_usage": "research",
+    "image": "",
+    "description": "Un jeu coopératif en 2D mêlant stratégie et die and retry. Incarnez des avatars sacrés et défendez votre civilisation face à des factions rivales dans un univers magique et hostile. Progressez à travers des missions intenses et révélez tout le potentiel des avatars.",
+    "technologies": ["Lua", "Game Design", "Coop 2D", "Pixel Art"],
+    "links": {
+      "github": "https://github.com/Anstrum/Twinned-Spirits"
+    },
+    "dates": {
+      "started": "2024-09",
+      "lastUpdate": "2024-12"
+    },
+    "highlights": [
+      "Mécaniques de synchronisation entre deux avatars complémentaires",
+      "Système d'artefacts sacrés octroyant des synergies puissantes"
+    ]
+  },
+  {
+    "id": "chou-chou-mod",
+    "title": "Chou-Chou Mod & Wiki",
+    "tagline": "Modding Java complet enrichissant le gameplay avec wiki interactif dédié.",
+    "status": "completed",
+    "progress": 100,
+    "featured": false,
+    "flagship": false,
+    "version": "v1.3.4",
+    "collaboration": "solo",
+    "ai_usage": "none",
+    "image": "",
+    "description": "Mod développé en Java introduisant de nouveaux objets, mécaniques et créatures, accompagné d'un site wiki clair permettant aux joueurs de consulter toutes les recettes et caractéristiques.",
+    "technologies": ["Java", "HTML", "CSS", "Modding"],
+    "links": {
+      "github": "https://github.com/Anstrum/chou-chou-mod",
+      "demo": "https://github.com/Anstrum/chouchou-mod-wiki"
+    },
+    "dates": {
+      "started": "2026-08",
+      "lastUpdate": "2026-11"
+    },
+    "highlights": [
+      "Architecture modulaire robuste en Java",
+      "Documentation wiki intégrée pour la communauté"
+    ]
+  },
+  {
+    "id": "engage",
+    "title": "Engage",
+    "tagline": "Application de chat de proximité pour faciliter les rencontres et échanges réels.",
+    "status": "idea",
+    "progress": 15,
+    "featured": false,
+    "flagship": false,
+    "version": "v0.1.0-concept",
+    "collaboration": "solo",
+    "ai_usage": "research",
+    "image": "",
+    "description": "Engage est une application de chat de proximité conçue pour permettre aux personnes situées dans un même lieu physique de briser la glace plus aisément et d'échanger en toute sécurité.",
+    "technologies": ["Mobile", "Géolocalisation", "WebSockets", "UI/UX"],
+    "links": {
+      "github": "https://github.com/Anstrum/Engage"
+    },
+    "dates": {
+      "started": "2023-06",
+      "lastUpdate": "2023-06"
+    },
+    "highlights": [
+      "Concept centré sur les interactions physiques réelles",
+      "Salons éphémères géolocalisés sans conservation de données privées"
+    ]
+  },
+  {
+    "id": "undead-rapture",
+    "title": "Undead Rapture",
+    "tagline": "Jeu de défense et de tactique face à des vagues infinies d'attaques de zombies.",
+    "status": "completed",
+    "progress": 100,
+    "featured": false,
+    "flagship": false,
+    "version": "v1.0.0",
+    "collaboration": "solo",
+    "ai_usage": "none",
+    "image": "",
+    "description": "Undead Rapture est un jeu de stratégie et de défense développé en Lua où vous devez fortifier vos positions et optimiser votre arsenal pour survivre à une invasion perpétuelle de morts-vivants.",
+    "technologies": ["Lua", "LÖVE 2D", "Stratégie", "Survie"],
+    "links": {
+      "github": "https://github.com/Anstrum/undead-rapture"
+    },
+    "dates": {
+      "started": "2023-05",
+      "lastUpdate": "2023-07"
+    },
+    "highlights": [
+      "Vagues infinies à difficulté exponentielle",
+      "Arsenal varié et pièges défensifs à synchroniser"
+    ]
+  }
+]

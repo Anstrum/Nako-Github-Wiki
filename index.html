@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nako // Vault & Omen Wing Legion Archives</title>
+  <meta name="description" content="Catalogue centralisé des projets, jeux et initiatives de l'univers Nako & Omen Wing Legion par Anstrum. Suivi d'état, filtres multicritères et transparence sur l'usage de l'IA.">
+  <meta name="author" content="Anstrum">
+  <meta property="og:title" content="Nako // Project Vault & OWL Archives">
+  <meta property="og:description" content="Explorez l'ensemble des créations, jeux vidéo et projets communautaires par Anstrum.">
+  <meta property="og:image" content="assets/images/nako-logo.png">
+  <meta name="theme-color" content="#07090e">
+  <link rel="icon" type="image/png" href="assets/images/nako-logo.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       HEADER & NAVIGATION
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand-wrapper">
+        <div class="brand-avatar-container">
+          <img src="assets/images/nako-logo.png" alt="Nako Logo" class="brand-avatar">
+        </div>
+        <div class="brand-text">
+          <div class="brand-title">
+            <span class="nako-tag">NAKO</span>
+            <span class="divider">//</span>
+            <span class="owl-tag">OWL</span>
+          </div>
+          <span class="brand-subtitle">PROJECT ARCHIVES & COMMUNITY</span>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <button class="theme-toggle-btn" id="theme-toggle-btn" title="Changer le thème">
+          <span id="theme-icon">🌙</span>
+          <span class="hide-mobile">Thème</span>
+        </button>
+
+        <button class="action-btn-secondary" id="open-new-project-btn" title="Générer un snippet JSON pour un nouveau projet">
+          <span>➕</span>
+          <span class="hide-mobile">Nouveau</span>
+        </button>
+
+        <a href="https://github.com/Anstrum" target="_blank" rel="noopener noreferrer" class="action-btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          <span>GitHub</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- ==========================================================================
+         HERO SECTION (PROFILE & KPIS)
+         ========================================================================== -->
+    <section class="hero-section">
+      <div class="hero-grid">
+        <div class="hero-portrait-wrap">
+          <img src="assets/images/nako-avatar.webp" alt="Nako Portrait" class="hero-portrait-img">
+          <div class="hero-badge-status">
+            <span class="pulse-dot"></span>
+            <span>Online</span>
+          </div>
+        </div>
+
+        <div class="hero-info">
+          <div class="hero-title-row">
+            <h1 class="hero-name">Anstrum // Nako</h1>
+            <span class="hero-role-pill">Game Dev & Creative Engineer</span>
+          </div>
+          <p class="hero-bio">
+            Bienvenue dans le portail centralisé de mes projets. Jeux vidéo indépendants en Lua / LÖVE 2D, architectures multi-joueurs, outils communautaires et le projet majeur <strong>Omen Wing Legion [OWL]</strong>. Chaque projet détaille son état d'avancement, sa version et la transparence de son utilisation de l'IA.
+          </p>
+          <div class="hero-links">
+            <a href="https://github.com/Anstrum" target="_blank" rel="noopener noreferrer" class="hero-link">
+              <span>🐙</span> github.com/Anstrum
+            </a>
+            <span style="color: var(--text-subtle);">•</span>
+            <span class="hero-link">
+              <span>🦉</span> Omen Wing Legion Lead
+            </span>
+          </div>
+        </div>
+
+        <div class="hero-stats-cards">
+          <div class="kpi-box">
+            <div class="kpi-val" id="kpi-total">-</div>
+            <div class="kpi-lbl">Projets</div>
+          </div>
+          <div class="kpi-box">
+            <div class="kpi-val" id="kpi-in-progress" style="color: var(--status-in-progress);">-</div>
+            <div class="kpi-lbl">En cours</div>
+          </div>
+          <div class="kpi-box">
+            <div class="kpi-val" id="kpi-completed" style="color: var(--status-completed);">-</div>
+            <div class="kpi-lbl">Terminés</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         FLAGSHIP SPOTLIGHT: OMEN WING LEGION [OWL]
+         ========================================================================== -->
+    <section class="flagship-banner">
+      <div class="flagship-grid">
+        <div class="flagship-emblem-wrap">
+          <img src="assets/images/owl-emblem.png" alt="Omen Wing Legion Emblem" class="flagship-emblem">
+        </div>
+
+        <div class="flagship-content">
+          <div class="flagship-tag-row">
+            <span class="badge-flagship">PROJET PHARE // FLAGSHIP</span>
+            <span class="badge-version">v0.5.0-alpha</span>
+            <span class="meta-pill" style="color: var(--status-in-progress);">🚀 En cours (45%)</span>
+            <span class="meta-pill">👤 Solo</span>
+            <span class="card-ai-badge card-ai-research" style="padding: 3px 8px;">💡 IA : Veille & Lore</span>
+          </div>
+
+          <h2 class="flagship-title">Omen Wing Legion [OWL]</h2>
+          <p class="flagship-desc">
+            Mon plus gros projet d'envergure. Fondé sous l'emblème de la chouette aux yeux incandescents, OWL vise à bâtir une communauté engagée autour d'un lore mystique, d'outils collaboratifs et d'expériences de jeu connectées.
+          </p>
+
+          <div class="flagship-tech-row">
+            <span class="tech-chip">Communauté</span>
+            <span class="tech-chip">Discord API</span>
+            <span class="tech-chip">Node.js</span>
+            <span class="tech-chip">Lua</span>
+            <span class="tech-chip">Game Design</span>
+            <span class="tech-chip">Lore Engine</span>
+          </div>
+        </div>
+
+        <div class="flagship-actions">
+          <a href="https://github.com/Anstrum" target="_blank" rel="noopener noreferrer" class="action-btn-primary">
+            <span>Rejoindre la Légion</span>
+          </a>
+          <button class="action-btn-secondary card-details-btn" data-project-id="omen-wing-legion">
+            <span>Détails & Vision</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CATEGORIZED TOGGLE FILTERS
+         ========================================================================== -->
+    <section class="filters-section">
+      <div class="filters-header-row">
+        <div class="search-input-wrap">
+          <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" id="search-input" class="search-input" placeholder="Rechercher par titre, tag ou description..." autocomplete="off">
+        </div>
+
+        <div class="filters-summary-wrap">
+          <span class="results-count" id="results-count">Chargement des projets...</span>
+          <button class="reset-filters-btn" id="reset-filters-btn" title="Réinitialiser tous les filtres">
+            ✕ Réinitialiser
+          </button>
+        </div>
+      </div>
+
+      <div class="filter-categories-stack">
+        <!-- 1. Catégorie Statut -->
+        <div class="filter-category-group">
+          <div class="filter-category-label">
+            <span>📌</span>
+            <span>Statut</span>
+          </div>
+          <div class="toggles-list" id="toggles-status"></div>
+        </div>
+
+        <!-- 2. Catégorie IA -->
+        <div class="filter-category-group">
+          <div class="filter-category-label">
+            <span>🤖</span>
+            <span>Usage de l'IA</span>
+          </div>
+          <div class="toggles-list" id="toggles-ai"></div>
+        </div>
+
+        <!-- 3. Catégorie Collaboration -->
+        <div class="filter-category-group">
+          <div class="filter-category-label">
+            <span>👤</span>
+            <span>Équipe / Solo</span>
+          </div>
+          <div class="toggles-list" id="toggles-collab"></div>
+        </div>
+
+        <!-- 4. Catégorie Technologies -->
+        <div class="filter-category-group">
+          <div class="filter-category-label">
+            <span>💻</span>
+            <span>Technologies</span>
+          </div>
+          <div class="toggles-list" id="toggles-tech"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         PROJECTS CARDS GRID
+         ========================================================================== -->
+    <section>
+      <div class="projects-grid" id="projects-grid">
+        <!-- Rempli dynamiquement par app.js -->
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       MODAL 1: DETAILS DU PROJET
+       ========================================================================== -->
+  <div class="modal-overlay" id="detail-modal" aria-hidden="true" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 class="modal-title">Fiche de Projet</h3>
+        <button class="modal-close-btn" id="detail-modal-close" aria-label="Fermer">&times;</button>
+      </div>
+      <div class="modal-content-body" id="detail-modal-content">
+        <!-- Rempli dynamiquement par app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL 2: GENERATEUR DE PROJET (JSON HELPER)
+       ========================================================================== -->
+  <div class="modal-overlay" id="new-project-modal" aria-hidden="true" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 class="modal-title">➕ Générateur de Projet (Snippet JSON)</h3>
+        <button class="modal-close-btn" id="new-project-modal-close" aria-label="Fermer">&times;</button>
+      </div>
+      <div class="modal-content-body">
+        <p style="font-size: 0.85rem; color: var(--text-muted);">
+          Remplissez les champs ci-dessous pour générer instantanément l'objet JSON à ajouter dans votre fichier <code>projects.json</code> :
+        </p>
+
+        <form id="json-generator-form" onsubmit="event.preventDefault();">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+            <div class="form-group">
+              <label class="form-label">Titre du projet</label>
+              <input type="text" name="pTitle" class="form-input" placeholder="ex: Mon Nouveau Jeu" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Version</label>
+              <input type="text" name="pVersion" class="form-input" placeholder="ex: v0.1.0-alpha">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Phrase d'accroche (Tagline)</label>
+            <input type="text" name="pTagline" class="form-input" placeholder="Court résumé percutant...">
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px;">
+            <div class="form-group">
+              <label class="form-label">Statut</label>
+              <select name="pStatus" class="form-select">
+                <option value="in-progress">🚀 En cours</option>
+                <option value="completed">✅ Terminé</option>
+                <option value="paused">⏸️ En pause</option>
+                <option value="idea">💡 Idée / Prévu</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Usage de l'IA</label>
+              <select name="pAi" class="form-select">
+                <option value="none">🚫 Non (Sans IA)</option>
+                <option value="research">💡 Aide et renseignement</option>
+                <option value="assisted-code">⚡ Code partiel</option>
+                <option value="full">🤖 Complet</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Collaboration</label>
+              <select name="pCollab" class="form-select">
+                <option value="solo">👤 Solo</option>
+                <option value="team">👥 En équipe</option>
+              </select>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+            <div class="form-group">
+              <label class="form-label">Progression (%)</label>
+              <input type="number" name="pProgress" class="form-input" value="50" min="0" max="100">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Chemin Image (optionnel)</label>
+              <input type="text" name="pImage" class="form-input" placeholder="assets/images/mon-image.png">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Technologies (séparées par une virgule)</label>
+            <input type="text" name="pTech" class="form-input" placeholder="Lua, LÖVE 2D, Game Dev">
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+            <div class="form-group">
+              <label class="form-label">Lien GitHub</label>
+              <input type="url" name="pGithub" class="form-input" placeholder="https://github.com/Anstrum/mon-projet">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Lien Démo (optionnel)</label>
+              <input type="url" name="pDemo" class="form-input" placeholder="https://...">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Description détaillée</label>
+            <textarea name="pDesc" class="form-textarea" rows="3" placeholder="Objectifs du projet, gameplay, architecture..."></textarea>
+          </div>
+        </form>
+
+        <h4 class="modal-section-title">Snippet JSON généré</h4>
+        <pre class="code-preview-block" id="json-output-preview"></pre>
+
+        <div style="display: flex; justify-content: flex-end; gap: 10px;">
+          <button class="action-btn-primary" id="copy-json-btn">
+            📋 Copier le snippet JSON
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-brand-info">
+        <span style="font-weight: 700; letter-spacing: -0.02em;">NAKO // OWL ARCHIVES</span>
+        <span style="color: var(--text-subtle);">•</span>
+        <span class="footer-copy">Hébergé sur GitHub Pages — Fièrement développé sans framework lourd</span>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/Anstrum/Nako-Github-Wiki" target="_blank" rel="noopener noreferrer">Code Source</a>
+        <a href="https://github.com/Anstrum" target="_blank" rel="noopener noreferrer">Profil Anstrum</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
