@@ -119,11 +119,24 @@ button {
 }
 
 /* Layout Container */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
+}
+
 .container {
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 12px;
+  }
 }
 
 /* ==========================================================================
@@ -148,7 +161,33 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 72px;
+  height: 66px;
+  width: 100%;
+  max-width: 100%;
+  gap: 10px;
+}
+
+.brand-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  flex-shrink: 1;
+}
+
+.brand-text {
+  min-width: 0;
+}
+
+.brand-title {
+  white-space: nowrap;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
 }
 
 .brand-wrapper {
@@ -1342,9 +1381,9 @@ button {
   display: flex;
   align-items: center;
   gap: 6px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  white-space: normal;
+  word-break: break-word;
+  line-height: 1.35;
 }
 
 .modal-progress-breakdown {
@@ -1449,4 +1488,217 @@ button {
   color: var(--status-in-progress);
   font-size: 0.75rem;
   margin-top: 1px;
+}
+
+
+/* ==========================================================================
+   ENHANCED MOBILE RESPONSIVE ENGINE (320px - 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .hide-mobile {
+    display: none !important;
+  }
+
+  .brand-subtitle {
+    display: none !important;
+  }
+
+  .brand-avatar-container {
+    width: 38px;
+    height: 38px;
+  }
+
+  .brand-title {
+    font-size: 1.05rem;
+  }
+
+  .theme-toggle-btn,
+  .action-btn-secondary,
+  .action-btn-primary {
+    padding: 8px 10px;
+    font-size: 0.8rem;
+    gap: 4px;
+  }
+
+  .hero-section {
+    padding: 24px 0 18px;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 22px 14px;
+    gap: 18px;
+  }
+
+  .hero-portrait-wrap {
+    width: 86px;
+    height: 86px;
+    margin: 0 auto;
+  }
+
+  .hero-title-row {
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .hero-name {
+    font-size: 1.45rem;
+  }
+
+  .hero-bio {
+    font-size: 0.88rem;
+    line-height: 1.5;
+  }
+
+  .hero-links {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .hero-stats-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    gap: 8px;
+    margin-top: 4px;
+  }
+
+  .kpi-box {
+    min-width: 0;
+    padding: 10px 4px;
+  }
+
+  .kpi-val {
+    font-size: 1.35rem;
+  }
+
+  .kpi-lbl {
+    font-size: 0.62rem;
+  }
+
+  .flagship-banner {
+    padding: 20px 14px;
+    margin: 14px 0 24px;
+  }
+
+  .flagship-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 16px;
+  }
+
+  .flagship-emblem-wrap {
+    width: 110px;
+    height: 110px;
+    margin: 0 auto;
+  }
+
+  .flagship-title {
+    font-size: 1.35rem;
+  }
+
+  .flagship-desc {
+    font-size: 0.88rem;
+  }
+
+  .flagship-tag-row,
+  .flagship-tech-row {
+    justify-content: center;
+  }
+
+  .flagship-actions {
+    width: 100%;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .flagship-actions a,
+  .flagship-actions button {
+    width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  .filters-section {
+    padding: 16px 12px;
+    margin-bottom: 24px;
+  }
+
+  .filters-header-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+
+  .search-input-wrap {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .filters-summary-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .filter-categories-stack {
+    gap: 12px;
+    padding-top: 14px;
+  }
+
+  .filter-category-group {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .filter-category-label {
+    min-width: unset;
+    font-size: 0.72rem;
+  }
+
+  .toggles-list {
+    gap: 6px;
+    width: 100%;
+  }
+
+  .toggle-btn {
+    padding: 5px 9px;
+    font-size: 0.74rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+
+  .project-card {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .card-body {
+    padding: 18px 14px;
+  }
+
+  .card-title {
+    font-size: 1.15rem;
+  }
+
+  .modal-dialog {
+    max-width: 95vw;
+    margin: 10px;
+  }
+
+  .modal-header,
+  .modal-content-body {
+    padding: 16px 14px;
+  }
 }
