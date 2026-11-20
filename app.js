@@ -382,6 +382,12 @@
 
           <h3 class="card-title">${project.title}</h3>
           <p class="card-tagline">${project.tagline || ''}</p>
+          ${project.detailed_progress && project.detailed_progress.current_milestone ? `
+            <div class="card-milestone-pill" title="Jalon : ${project.detailed_progress.current_milestone}">
+              <span>🎯</span>
+              <span>${project.detailed_progress.current_milestone}</span>
+            </div>
+          ` : ''}
 
           ${progressHtml}
 
@@ -472,6 +478,34 @@
       </div>
 
       ${highlightsHtml}
+
+      ${project.detailed_progress ? `
+        <div class="modal-progress-breakdown">
+          <h4 class="modal-section-title">📊 Point Précis sur l'Avancement</h4>
+          <div class="progress-milestone-bar">
+            <div class="milestone-current">
+              <span class="milestone-label">Jalon actuel :</span>
+              <strong class="milestone-value">${project.detailed_progress.current_milestone || 'En cours'}</strong>
+            </div>
+            ${project.detailed_progress.codebase_size ? `<div class="milestone-codebase">📦 ${project.detailed_progress.codebase_size}</div>` : ''}
+          </div>
+
+          <div class="progress-columns-grid">
+            <div>
+              <h5 class="progress-subhead">Ce qui est déjà implémenté</h5>
+              <ul class="progress-checklist">
+                ${(project.detailed_progress.implemented || []).map(item => `<li>${item}</li>`).join('')}
+              </ul>
+            </div>
+            <div>
+              <h5 class="progress-subhead">Prochaines étapes (Feuille de route)</h5>
+              <ul class="progress-nextlist">
+                ${(project.detailed_progress.next_steps || []).map(item => `<li>${item}</li>`).join('')}
+              </ul>
+            </div>
+          </div>
+        </div>
+      ` : ''}
 
       <div>
         <h4 class="modal-section-title">Technologies Utilisées</h4>

@@ -12,7 +12,14 @@
     "ai_usage": "research",
     "image": "assets/images/owl-emblem.png",
     "description": "Omen Wing Legion [OWL] est mon projet majeur d'envergure. Conçu pour fédérer une communauté passionnée de joueurs, créateurs et développeurs autour d'un univers immersif et d'expériences partagées. L'ambition est d'associer un lore captivant, des bots interactifs, des outils collaboratifs et des modules de jeu sous un même étendard emblématique.",
-    "technologies": ["Communauté", "Discord API", "Node.js", "Lua", "Game Design", "Lore Engine"],
+    "technologies": [
+      "Communauté",
+      "Discord API",
+      "Node.js",
+      "Lua",
+      "Game Design",
+      "Lore Engine"
+    ],
     "links": {
       "github": "https://github.com/Anstrum",
       "community": "https://github.com/Anstrum"
@@ -24,184 +31,42 @@
     "highlights": [
       "Emblème mystique de la chouette aux ailes déployées et yeux cyan incandescents",
       "Vision communautaire unifiée liant univers narratif, bots et jeux indépendants",
-      "Fondations solides pour accueillir de futurs collaborateurs et membres"
-    ]
+      "Point précis : Lore et identité visuelle finalisés, architecture communautaire et intégration en cours"
+    ],
+    "detailed_progress": {
+      "current_milestone": "Définition du socle communautaire & synergie des projets",
+      "implemented": [
+        "Identité visuelle et emblème emblématique",
+        "Architecture narrative globale",
+        "Spécifications des modules communautaires"
+      ],
+      "next_steps": [
+        "Lancement du Discord officiel OWL",
+        "Bot de guilde interactif",
+        "Connexion aux jeux de l'écosystème"
+      ],
+      "codebase_size": "Projet phare / Direction artistique et design système"
+    }
   },
   {
-    "id": "nako-hub",
-    "title": "Nako Project Vault & Hub",
-    "tagline": "Portail centralisé de recensement, suivi d'état et vitrine des créations de l'univers Nako.",
+    "id": "chou-chou-mod",
+    "title": "ChouChou Mod (Minecraft 1.26.3)",
+    "tagline": "Mod Minecraft NeoForge massif : 82 enchantements débridés, transcendance et crafts complexes.",
     "status": "completed",
     "progress": 100,
     "featured": true,
     "flagship": false,
     "version": "v1.0.0",
     "collaboration": "solo",
-    "ai_usage": "assisted-code",
-    "image": "assets/images/nako-logo.png",
-    "description": "Site vitrine et catalogue interactif hébergé sur GitHub Pages permettant d'explorer l'intégralité des projets avec des filtres multicritères par toggles catégorisés (statut, utilisation de l'IA, technologies, collaboration), recherche instantanée et bascule de thème sombre/clair.",
-    "technologies": ["HTML5", "CSS3 Modern", "Vanilla JavaScript", "GitHub Pages"],
-    "links": {
-      "github": "https://github.com/Anstrum/Nako-Github-Wiki",
-      "demo": "https://anstrum.github.io/Nako-Github-Wiki/"
-    },
-    "dates": {
-      "started": "2026-11",
-      "lastUpdate": "2026-11"
-    },
-    "highlights": [
-      "Zéro étape de build, hébergement natif et instantané sur GitHub Pages",
-      "Système de filtres par toggles catégorisés réactifs (Logique ET multi-facettes)",
-      "Design soigné combinant l'ambiance Nako (Crimson) et OWL (Cyber Teal)",
-      "Générateur de projet JSON intégré pour des ajouts rapides en un clic"
-    ]
-  },
-  {
-    "id": "neon-dash",
-    "title": "Neon Dash",
-    "tagline": "Jeu d'action/plateforme 2D cyberpunk en mégapole verticale avec exosquelette modulaire.",
-    "status": "in-progress",
-    "progress": 65,
-    "featured": true,
-    "flagship": false,
-    "version": "v0.7.0",
-    "collaboration": "solo",
-    "ai_usage": "assisted-code",
-    "image": "",
-    "description": "Jeu de plateforme et d'action 2D en low-poly procédural où vous incarnez un coursier clandestin livrant sous haute tension dans une mégapole cyberpunk verticale, propulsé par un système d'exosquelette entièrement modulaire.",
-    "technologies": ["Lua", "LÖVE 2D", "Génération Procédurale", "Game Dev"],
-    "links": {
-      "github": "https://github.com/Anstrum/neon-dash"
-    },
-    "dates": {
-      "started": "2026-05",
-      "lastUpdate": "2026-09"
-    },
-    "highlights": [
-      "Maniabilité nerveuse et gameplay vertical dynamique",
-      "Génération procédurale de niveaux pour une rejouabilité infinie",
-      "Système d'améliorations et de modules d'exosquelette"
-    ]
-  },
-  {
-    "id": "archimage-sanctuary-td",
-    "title": "Archimage Sanctuary TD",
-    "tagline": "Hybride novateur associant gestion de colonie idle et tower defense en temps réel.",
-    "status": "in-progress",
-    "progress": 80,
-    "featured": false,
-    "flagship": false,
-    "version": "v0.9.2",
-    "collaboration": "solo",
     "ai_usage": "none",
     "image": "",
-    "description": "Dual-gameplay hybrid game combining idle colony management and real-time tower defense, développé avec LÖVE 2D en Lua. Bâtissez votre sanctuaire, optimisez la production de mana et repoussez les vagues d'assaillants avec des sorts dévastateurs.",
-    "technologies": ["Lua", "LÖVE 2D", "Tower Defense", "Gestion"],
-    "links": {
-      "github": "https://github.com/Anstrum/archimage-sanctuary-td"
-    },
-    "dates": {
-      "started": "2026-03",
-      "lastUpdate": "2026-09"
-    },
-    "highlights": [
-      "Double boucle de gameplay : gestion passive et tactique active",
-      "Arbre de sorts et synergies élémentaires approfondies",
-      "Développement 100% fait main en Lua pur"
-    ]
-  },
-  {
-    "id": "altars-in-outworld",
-    "title": "Altars in Outworld",
-    "tagline": "MMO indépendant où vous tentez l'ascension au sein d'une communauté soudée.",
-    "status": "paused",
-    "progress": 40,
-    "featured": false,
-    "flagship": false,
-    "version": "v0.3.0-prototype",
-    "collaboration": "team",
-    "ai_usage": "none",
-    "image": "",
-    "description": "Altars in Outworld est un MMO invitant les joueurs à explorer un univers mystique, coopérer pour ériger des autels sacrés et participer à une communauté grandissante.",
-    "technologies": ["JavaScript", "Node.js", "WebSockets", "MMO Architecture"],
-    "links": {
-      "github": "https://github.com/Anstrum/altars-in-outworld"
-    },
-    "dates": {
-      "started": "2023-04",
-      "lastUpdate": "2023-08"
-    },
-    "highlights": [
-      "Système d'autels coopératifs et progression d'alliance",
-      "Synchronisation multi-joueurs temps réel par WebSockets"
-    ]
-  },
-  {
-    "id": "pixelwars",
-    "title": "PixelWars",
-    "tagline": "Canevas collaboratif pixel-art temps réel style r/place avec Node.js & Socket.io.",
-    "status": "completed",
-    "progress": 100,
-    "featured": false,
-    "flagship": false,
-    "version": "v1.1.0",
-    "collaboration": "solo",
-    "ai_usage": "none",
-    "image": "",
-    "description": "PixelWars est un projet complet permettant d'héberger des sessions type r/Place pour de multiples utilisateurs avec actualisation en temps réel via Socket.io et stockage d'état résilient.",
-    "technologies": ["JavaScript", "Node.js", "Socket.io", "HTML5 Canvas"],
-    "links": {
-      "github": "https://github.com/Anstrum/PixelWars"
-    },
-    "dates": {
-      "started": "2023-03",
-      "lastUpdate": "2023-05"
-    },
-    "highlights": [
-      "Gestion d'un canvas interactif haute fréquence",
-      "Cooldown dynamique de placement de pixel et anti-triche"
-    ]
-  },
-  {
-    "id": "twinned-spirits",
-    "title": "Twinned Spirits",
-    "tagline": "Jeu coopératif 2D mêlant stratégie mystique, artefacts sacrés et die-and-retry.",
-    "status": "paused",
-    "progress": 55,
-    "featured": false,
-    "flagship": false,
-    "version": "v0.4.5",
-    "collaboration": "team",
-    "ai_usage": "research",
-    "image": "",
-    "description": "Un jeu coopératif en 2D mêlant stratégie et die and retry. Incarnez des avatars sacrés et défendez votre civilisation face à des factions rivales dans un univers magique et hostile. Progressez à travers des missions intenses et révélez tout le potentiel des avatars.",
-    "technologies": ["Lua", "Game Design", "Coop 2D", "Pixel Art"],
-    "links": {
-      "github": "https://github.com/Anstrum/Twinned-Spirits"
-    },
-    "dates": {
-      "started": "2024-09",
-      "lastUpdate": "2024-12"
-    },
-    "highlights": [
-      "Mécaniques de synchronisation entre deux avatars complémentaires",
-      "Système d'artefacts sacrés octroyant des synergies puissantes"
-    ]
-  },
-  {
-    "id": "chou-chou-mod",
-    "title": "Chou-Chou Mod & Wiki",
-    "tagline": "Modding Java complet enrichissant le gameplay avec wiki interactif dédié.",
-    "status": "completed",
-    "progress": 100,
-    "featured": false,
-    "flagship": false,
-    "version": "v1.3.4",
-    "collaboration": "solo",
-    "ai_usage": "none",
-    "image": "",
-    "description": "Mod développé en Java introduisant de nouveaux objets, mécaniques et créatures, accompagné d'un site wiki clair permettant aux joueurs de consulter toutes les recettes et caractéristiques.",
-    "technologies": ["Java", "HTML", "CSS", "Modding"],
+    "description": "Mod majeur développé en Java pour Minecraft 1.26.3 NeoForge. Introduit un système complet d'enchantements débridés au niveau 10, 82 sorts uniques rééquilibrés, le système de Transcendance (Table & Cristal de transcendance), des sacs et accessoires dimensionnels, et un atelier de forge complet.",
+    "technologies": [
+      "Java",
+      "Minecraft NeoForge",
+      "Game Balance",
+      "Modding"
+    ],
     "links": {
       "github": "https://github.com/Anstrum/chou-chou-mod",
       "demo": "https://github.com/Anstrum/chouchou-mod-wiki"
@@ -211,40 +76,29 @@
       "lastUpdate": "2026-11"
     },
     "highlights": [
-      "Architecture modulaire robuste en Java",
-      "Documentation wiki intégrée pour la communauté"
-    ]
+      "844 fichiers au total dont 186 fichiers sources de code et données équilibrées",
+      "82 enchantements personnalisés et vanilla poussés jusqu'au niveau 10",
+      "Système de tamisage (Sifting), table de Transcendance et artefacts d'enchantement",
+      "Point précis : Version 1.0.0 finalisée et documentée avec succès"
+    ],
+    "detailed_progress": {
+      "current_milestone": "Release v1.0.0 achevée",
+      "implemented": [
+        "82 enchantements débridés avec formules mathématiques",
+        "Système complet de Transcendance",
+        "Sacoches, accessoires et waystones",
+        "Spécifications et équilibrage complets"
+      ],
+      "next_steps": [
+        "Maintien et retours d'expérience des joueurs sur le wiki"
+      ],
+      "codebase_size": "844 fichiers (186 fichiers de code Java et markdown de données)"
+    }
   },
   {
-    "id": "engage",
-    "title": "Engage",
-    "tagline": "Application de chat de proximité pour faciliter les rencontres et échanges réels.",
-    "status": "idea",
-    "progress": 15,
-    "featured": false,
-    "flagship": false,
-    "version": "v0.1.0-concept",
-    "collaboration": "solo",
-    "ai_usage": "research",
-    "image": "",
-    "description": "Engage est une application de chat de proximité conçue pour permettre aux personnes situées dans un même lieu physique de briser la glace plus aisément et d'échanger en toute sécurité.",
-    "technologies": ["Mobile", "Géolocalisation", "WebSockets", "UI/UX"],
-    "links": {
-      "github": "https://github.com/Anstrum/Engage"
-    },
-    "dates": {
-      "started": "2023-06",
-      "lastUpdate": "2023-06"
-    },
-    "highlights": [
-      "Concept centré sur les interactions physiques réelles",
-      "Salons éphémères géolocalisés sans conservation de données privées"
-    ]
-  },
-  {
-    "id": "undead-rapture",
-    "title": "Undead Rapture",
-    "tagline": "Jeu de défense et de tactique face à des vagues infinies d'attaques de zombies.",
+    "id": "chouchou-mod-wiki",
+    "title": "ChouChou Mod Wiki Officiel",
+    "tagline": "Documentation interactive et grimoire officiel des 82 enchantements et mécaniques.",
     "status": "completed",
     "progress": 100,
     "featured": false,
@@ -253,18 +107,868 @@
     "collaboration": "solo",
     "ai_usage": "none",
     "image": "",
-    "description": "Undead Rapture est un jeu de stratégie et de défense développé en Lua où vous devez fortifier vos positions et optimiser votre arsenal pour survivre à une invasion perpétuelle de morts-vivants.",
-    "technologies": ["Lua", "LÖVE 2D", "Stratégie", "Survie"],
+    "description": "Portail de documentation web complet pour le mod ChouChou (Jekyll / GitHub Pages). Présente le grimoire des 82 sorts, les formules d'effets, les paliers de puissance, les recettes d'artisanat et les guides de transcendance.",
+    "technologies": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Jekyll",
+      "GitHub Pages"
+    ],
+    "links": {
+      "github": "https://github.com/Anstrum/chouchou-mod-wiki"
+    },
+    "dates": {
+      "started": "2026-11",
+      "lastUpdate": "2026-11"
+    },
+    "highlights": [
+      "Entièrement synchronisé avec la version 1.0.0 du mod Java",
+      "Guides détaillés pour l'Atelier, la Transcendance et les Waystones",
+      "Point précis : Wiki opérationnel et déployé"
+    ],
+    "detailed_progress": {
+      "current_milestone": "Publication 1.0.0 terminée",
+      "implemented": [
+        "Tableaux interactifs de statistiques",
+        "Pages de documentation complètes par catégorie",
+        "Thème sobre et lisible pour joueurs"
+      ],
+      "next_steps": [
+        "Ajouts futurs lors de potentielles extensions de contenu"
+      ],
+      "codebase_size": "40 fichiers (12 fichiers web & guides markdown)"
+    }
+  },
+  {
+    "id": "archimage-sanctuary-td",
+    "title": "Archimage Sanctuary TD",
+    "tagline": "Hybride temps réel associant gestion de colonie idle et tower defense de bastion en LÖVE 2D.",
+    "status": "in-progress",
+    "progress": 75,
+    "featured": true,
+    "flagship": false,
+    "version": "v0.3.0",
+    "collaboration": "solo",
+    "ai_usage": "assisted-code",
+    "image": "",
+    "description": "Jeu hybride temps réel en Lua / LÖVE 2D où deux mécaniques fonctionnent en symbiose continue : gestion incrémentale de villageois arcaniques et défense nocturne de sanctuaire. Intègre une bascule bilingue instantanée Français / Anglais.",
+    "technologies": [
+      "Lua",
+      "LÖVE 2D",
+      "Tower Defense",
+      "Idle / Incrémental",
+      "Architecture Modulaire"
+    ],
+    "links": {
+      "github": "https://github.com/Anstrum/archimage-sanctuary-td"
+    },
+    "dates": {
+      "started": "2026-03",
+      "lastUpdate": "2026-09"
+    },
+    "highlights": [
+      "Plus de 208 fichiers et 182 fichiers de code Lua organisés avec soin",
+      "Boucle de gameplay jour/nuit complète : gestion d'âmes, forge, récolte de mana et sorts défensifs",
+      "Point précis : Jalon v0.3.0 atteint avec succès, feuille de route v0.4.0 active (Gestion de quota de forge, Pavillon des expéditions)"
+    ],
+    "detailed_progress": {
+      "current_milestone": "Jalon v0.4.0 (Automatisation & Expéditions)",
+      "implemented": [
+        "Moteur de vagues et d'ennemis par nuit",
+        "Gestion des âmes et villageois assignables",
+        "Arbre de sorts arcaniques et effets sonores/particules",
+        "Système de localisation instantané FR/EN"
+      ],
+      "next_steps": [
+        "Gestion de quotas dans la forge (limite munitions)",
+        "Pavillon des expéditions au-delà du sanctuaire",
+        "Arbre technologique d'érudition"
+      ],
+      "codebase_size": "208 fichiers (182 scripts Lua et assets de code)"
+    }
+  },
+  {
+    "id": "dual-game",
+    "title": "The Divide // Automation & Frontier Defense",
+    "tagline": "Automatisation logistique style Factorio à l'ouest, défense de mur fortifié à l'est (LÖVE 2D vectoriel).",
+    "status": "in-progress",
+    "progress": 35,
+    "featured": true,
+    "flagship": false,
+    "version": "v0.1.0-prototype",
+    "collaboration": "solo",
+    "ai_usage": "assisted-code",
+    "image": "",
+    "description": "Jeu novateur développé en Lua (LÖVE 2D) sous la contrainte stricte d'un rendu 100% vectoriel (aucun asset graphique externe). Le joueur gère une usine logistique d'un côté du mur pour ravitailler en temps réel les tourelles et défenses de l'autre côté.",
+    "technologies": [
+      "Lua",
+      "LÖVE 2D",
+      "Automatisation",
+      "Tower Defense",
+      "Rendu Vectoriel"
+    ],
+    "links": {
+      "github": "https://github.com/Anstrum/dual-game"
+    },
+    "dates": {
+      "started": "2026-11",
+      "lastUpdate": "2026-11"
+    },
+    "highlights": [
+      "Architecture vectorielle procédurale épurée et très fluide",
+      "Système de bâtiments logistiques () et moteur de combat ()",
+      "Point précis : Socle initial posé, mécaniques d'alimentation de munitions et tourelles en cours de couplage"
+    ],
+    "detailed_progress": {
+      "current_milestone": "Prototype jouable de boucle logistique",
+      "implemented": [
+        "Grille de construction vectorielle",
+        "Gestion des tapis et foreuses",
+        "Structure du Mur central avec tourelles de défense"
+      ],
+      "next_steps": [
+        "Raccordement fluide entre chaîne logistique et munitions des tourelles",
+        "Génération des vagues d'assaut ennemies",
+        "Équilibrage des coûts de ressources"
+      ],
+      "codebase_size": "13 fichiers dont 12 modules de code Lua"
+    }
+  },
+  {
+    "id": "monarchfall",
+    "title": "Monarchfall",
+    "tagline": "Jeu tactique en LÖVE 2D avec moteur de caméra rotative fluide et défense royale.",
+    "status": "in-progress",
+    "progress": 30,
+    "featured": false,
+    "flagship": false,
+    "version": "v0.1.0-alpha",
+    "collaboration": "solo",
+    "ai_usage": "assisted-code",
+    "image": "",
+    "description": "Jeu d'action et de tactique médiéval développé en Lua avec LÖVE 2D. Construit autour d'un moteur de caméra rotative dynamique à 360° et d'un système de défense de place forte.",
+    "technologies": [
+      "Lua",
+      "LÖVE 2D",
+      "Moteur de Caméra",
+      "Game Dev"
+    ],
+    "links": {
+      "github": "https://github.com/Anstrum/monarchfall"
+    },
+    "dates": {
+      "started": "2026-09",
+      "lastUpdate": "2026-09"
+    },
+    "highlights": [
+      "Moteur de caméra rotative sur les touches A et E avec amorti cinématique",
+      "Documentation complète et feuille de route détaillée dans ",
+      "Point précis : Jalon 1 (Socle technique & caméra) en cours de validation"
+    ],
+    "detailed_progress": {
+      "current_milestone": "Jalon 1 : Moteur de caméra & Contrôleur joueur",
+      "implemented": [
+        "Configuration fenêtrée redimensionnable",
+        "Moteur de caméra rotative fluide ()",
+        "Backlog pas à pas"
+      ],
+      "next_steps": [
+        "Contrôleur de déplacement du souverain",
+        "Grille de défense du château",
+        "IA des éclaireurs"
+      ],
+      "codebase_size": "6 fichiers dont scripts Lua et spécifications de design"
+    }
+  },
+  {
+    "id": "theo-rift-craft",
+    "title": "Theo Rift Craft",
+    "tagline": "Moteur d'aventure et d'artisanat 2D avec gestionnaire modulaire de scènes en Lua.",
+    "status": "in-progress",
+    "progress": 40,
+    "featured": false,
+    "flagship": false,
+    "version": "v0.2.0",
+    "collaboration": "solo",
+    "ai_usage": "none",
+    "image": "",
+    "description": "Projet de jeu d'exploration et de fabrication en Lua / LÖVE 2D intégrant un gestionnaire d'écrans () et une palette de couleurs dynamiques.",
+    "technologies": [
+      "Lua",
+      "LÖVE 2D",
+      "Architecture de Scènes",
+      "Pixel Art"
+    ],
+    "links": {
+      "github": "https://github.com/Anstrum/theo-rift-craft"
+    },
+    "dates": {
+      "started": "2026-04",
+      "lastUpdate": "2026-04"
+    },
+    "highlights": [
+      "Système complet de transitions et cycle de vie des scènes",
+      "Overlay de débogage et gestionnaire d'entrées manette/clavier",
+      "Point précis : Architecture des menus et transitions prête, moteur d'artisanat à greffer"
+    ],
+    "detailed_progress": {
+      "current_milestone": "Moteur de scènes & boucle de jeu",
+      "implemented": [
+        "App-manager robuste",
+        "Scènes d'intro, jeu et pause",
+        "Module de debug graphique"
+      ],
+      "next_steps": [
+        "Système d'inventaire et grille de craft",
+        "Génération de la carte de failles"
+      ],
+      "codebase_size": "12 fichiers (10 scripts Lua)"
+    }
+  },
+  {
+    "id": "aether-vanguard-website",
+    "title": "Aether Vanguard Website",
+    "tagline": "Portail vitrine et espace de brainstorming interactif pour le projet Aether Vanguard.",
+    "status": "in-progress",
+    "progress": 50,
+    "featured": false,
+    "flagship": false,
+    "version": "v0.2.0",
+    "collaboration": "solo",
+    "ai_usage": "assisted-code",
+    "image": "",
+    "description": "Site vitrine et maquettes interactives en HTML5 / JavaScript pour le collectif Aether Vanguard, comportant un espace de prototypage et de brainstorming.",
+    "technologies": [
+      "JavaScript",
+      "HTML5",
+      "CSS3",
+      "Web Design"
+    ],
+    "links": {
+      "github": "https://github.com/Anstrum/aether-vanguard-website"
+    },
+    "dates": {
+      "started": "2026-10",
+      "lastUpdate": "2026-10"
+    },
+    "highlights": [
+      "Comprend à la fois le site vitrine et un sous-dossier de prototypage interactif ()",
+      "Point précis : Interface visuelle opérationnelle, intégration de contenu communautaire en attente"
+    ],
+    "detailed_progress": {
+      "current_milestone": "Maquettage & Intégration vitrine",
+      "implemented": [
+        "Structure responsive du site",
+        "Composants de brainstorming visuel",
+        "Navigation épurée"
+      ],
+      "next_steps": [
+        "Rédaction du manifeste et liens de recrutement"
+      ],
+      "codebase_size": "11 fichiers web"
+    }
+  },
+  {
+    "id": "go_verclock_server",
+    "title": "Overclock Backend Server",
+    "tagline": "Serveur Go léger et haute performance avec synchronisation WebSocket et PostgreSQL.",
+    "status": "in-progress",
+    "progress": 60,
+    "featured": false,
+    "flagship": false,
+    "version": "v0.2.5",
+    "collaboration": "solo",
+    "ai_usage": "research",
+    "image": "",
+    "description": "Backend léger en Go pour une application privée de collaboration quotidienne (colocataires/amis). Auth zéro-mot-de-passe par clé unique hachée en bcrypt, synchronisation temps réel par WebSockets sur PostgreSQL.",
+    "technologies": [
+      "Go",
+      "PostgreSQL",
+      "WebSockets",
+      "Bcrypt Security",
+      "Backend"
+    ],
+    "links": {
+      "github": "https://github.com/Anstrum/go_verclock_server"
+    },
+    "dates": {
+      "started": "2025-11",
+      "lastUpdate": "2025-12"
+    },
+    "highlights": [
+      "Architecture Go modulaire () axée sur la légèreté et la vie privée",
+      "Module complet de listes de courses partagées avec schémas SQL",
+      "Point précis : Module Listes opérationnel, modules Notes partagées et Chat temps réel planifiés"
+    ],
+    "detailed_progress": {
+      "current_milestone": "Module de listes de courses temps réel",
+      "implemented": [
+        "Authentification par clé secrète bcrypt",
+        "Schéma SQL et migrations pour les listes",
+        "Gestionnaire de connexions WebSockets"
+      ],
+      "next_steps": [
+        "Module de notes partagées",
+        "Chat de groupe chiffré",
+        "Documentation API OpenAPI"
+      ],
+      "codebase_size": "9 fichiers Go & SQL"
+    }
+  },
+  {
+    "id": "Twinned-Spirits",
+    "title": "Twinned Spirits",
+    "tagline": "Jeu tactique coopératif 2D mêlant die-and-retry, avatars sacrés et artefacts mystiques en Unity.",
+    "status": "paused",
+    "progress": 55,
+    "featured": false,
+    "flagship": false,
+    "version": "v0.4.0",
+    "collaboration": "team",
+    "ai_usage": "research",
+    "image": "",
+    "description": "Projet Unity ambitieux en 2D coopérative où les joueurs incarnent des avatars sacrés complémentaires pour défendre leur sanctuaire face à des envahisseurs hostiles.",
+    "technologies": [
+      "Unity",
+      "C#",
+      "Multiplayer Coop",
+      "Animation 2D",
+      "Game Design"
+    ],
+    "links": {
+      "github": "https://github.com/Anstrum/Twinned-Spirits"
+    },
+    "dates": {
+      "started": "2024-09",
+      "lastUpdate": "2024-12"
+    },
+    "highlights": [
+      "Plus de 304 assets et packages de projet Unity complets",
+      "Dernière avancée : Intégration complète des animations des monstres (PR #1 fusionnée)",
+      "Point précis : Prototype multijoueur fonctionnel, en pause pour focus sur l'écosystème 2026"
+    ],
+    "detailed_progress": {
+      "current_milestone": "Intégration des monstres & animations",
+      "implemented": [
+        "Animations complètes des ennemis (mob-animations)",
+        "Mécaniques synchronisées entre les deux avatars",
+        "Système d'artefacts passifs"
+      ],
+      "next_steps": [
+        "Reprise des tests réseau",
+        "Boss fights de fin de donjon"
+      ],
+      "codebase_size": "304 fichiers d'assets, scripts et préfabriqués Unity"
+    }
+  },
+  {
+    "id": "cursor-dodge",
+    "title": "Cursor Game (Bullet Hell)",
+    "tagline": "Bullet-hell où le joueur contrôle exclusivement son curseur pour esquiver des tirs mortels.",
+    "status": "completed",
+    "progress": 100,
+    "featured": false,
+    "flagship": false,
+    "version": "v1.0.0",
+    "collaboration": "solo",
+    "ai_usage": "none",
+    "image": "",
+    "description": "Jeu d'arcade nerveux en Lua / LÖVE 2D où le curseur souris remplace le héros. Le joueur doit esquiver une pluie grandissante de projectiles ennemis tout en interceptant des bonus de soin verts.",
+    "technologies": [
+      "Lua",
+      "LÖVE 2D",
+      "Arcade",
+      "Bullet Hell"
+    ],
+    "links": {
+      "github": "https://github.com/Anstrum/cursor-dodge"
+    },
+    "dates": {
+      "started": "2023-12",
+      "lastUpdate": "2024-01"
+    },
+    "highlights": [
+      "13 fichiers sources structurés (, , )",
+      "Barre de vie dynamique, gestion de curseur personnalisé, scaling de difficulté exponentiel",
+      "Point précis : Projet complet et jouable à 100%"
+    ],
+    "detailed_progress": {
+      "current_milestone": "Jeu achevé & poli",
+      "implemented": [
+        "Curseur personnalisé haute réactivité",
+        "Gestionnaire de patterns de tir",
+        "Système de points de vie et collisions",
+        "Courbe de vitesse dynamique"
+      ],
+      "next_steps": [
+        "Ajouts optionnels de nouveaux types de lasers"
+      ],
+      "codebase_size": "13 fichiers dont 12 modules de code Lua"
+    }
+  },
+  {
+    "id": "hell-survivors",
+    "title": "Hell Survivors",
+    "tagline": "Battle-royale 2D en arène avec serveur multijoueur exécutable en local.",
+    "status": "paused",
+    "progress": 35,
+    "featured": false,
+    "flagship": false,
+    "version": "v0.3.0",
+    "collaboration": "solo",
+    "ai_usage": "none",
+    "image": "",
+    "description": "Petit battle-royale multijoueur en arène développé en Lua / LÖVE 2D avec son propre serveur socket local sans inscription obligatoire pour parties LAN rapides.",
+    "technologies": [
+      "Lua",
+      "LÖVE 2D",
+      "Sockets LAN",
+      "Multijoueur",
+      "Battle Royale"
+    ],
+    "links": {
+      "github": "https://github.com/Anstrum/hell-survivors"
+    },
+    "dates": {
+      "started": "2023-09",
+      "lastUpdate": "2023-09"
+    },
+    "highlights": [
+      "18 fichiers au total comprenant client de jeu et gestionnaire d'arène",
+      "Point précis : Déplacements des personnages et connexion au serveur local fonctionnels"
+    ],
+    "detailed_progress": {
+      "current_milestone": "Prototype réseau LAN",
+      "implemented": [
+        "Système de lobby par nom/mot de passe",
+        "Moteur de rendu d'arène et fond de carte",
+        "Protocole d'échange de positions"
+      ],
+      "next_steps": [
+        "Gestion des armes au sol",
+        "Cercle de tempête rétrécissant"
+      ],
+      "codebase_size": "18 fichiers de code Lua"
+    }
+  },
+  {
+    "id": "PixelWars",
+    "title": "PixelWars",
+    "tagline": "Clone interactif temps réel de Reddit r/Place avec Node.js, WebSockets et HTML5 Canvas.",
+    "status": "completed",
+    "progress": 100,
+    "featured": false,
+    "flagship": false,
+    "version": "v1.0.0",
+    "collaboration": "solo",
+    "ai_usage": "none",
+    "image": "",
+    "description": "Plateforme collaborative web permettant à des centaines d'utilisateurs de dessiner en simultané sur une grille pixelisée avec cooldown de pose et synchronisation haute fréquence par Socket.io.",
+    "technologies": [
+      "JavaScript",
+      "Node.js",
+      "Socket.io",
+      "HTML5 Canvas",
+      "CSS3"
+    ],
+    "links": {
+      "github": "https://github.com/Anstrum/PixelWars"
+    },
+    "dates": {
+      "started": "2022-11",
+      "lastUpdate": "2023-05"
+    },
+    "highlights": [
+      "Codebase serveur et client autonome avec authentification simplifiée",
+      "Point précis : Projet achevé et parfaitement fonctionnel en environnement local ou serveur"
+    ],
+    "detailed_progress": {
+      "current_milestone": "Version 1.0 complète",
+      "implemented": [
+        "Canevas interactif avec zoom et déplacement",
+        "Synchronisation temps réel Socket.io",
+        "Cooldown dynamique anti-spam de pixels"
+      ],
+      "next_steps": [
+        "Option d'export vidéo timelapse de la fresque"
+      ],
+      "codebase_size": "8 fichiers complets"
+    }
+  },
+  {
+    "id": "ShooterProtect",
+    "title": "Shooter Protect",
+    "tagline": "Jeu de tir et de défense de base spatial en 2D en LÖVE 2D.",
+    "status": "completed",
+    "progress": 100,
+    "featured": false,
+    "flagship": false,
+    "version": "v1.0.0",
+    "collaboration": "solo",
+    "ai_usage": "none",
+    "image": "",
+    "description": "Jeu de défense d'arcade rétro développé en Lua / LÖVE 2D comprenant un gestionnaire de colliders sur mesure, des vagues d'ennemis et des effets visuels.",
+    "technologies": [
+      "Lua",
+      "LÖVE 2D",
+      "Arcade",
+      "Physique / Colliders"
+    ],
+    "links": {
+      "github": "https://github.com/Anstrum/ShooterProtect"
+    },
+    "dates": {
+      "started": "2022-02",
+      "lastUpdate": "2022-07"
+    },
+    "highlights": [
+      "17 fichiers sources comprenant package  prêt à l'emploi",
+      "Point précis : Projet complet archivé fonctionnel"
+    ],
+    "detailed_progress": {
+      "current_milestone": "Jeu terminé",
+      "implemented": [
+        "Moteur de collision personnalisé ()",
+        "Vagues d'assaut d'ennemis multiples",
+        "Comptage de score et écran de défaite"
+      ],
+      "next_steps": [
+        "Aucun, projet jalon terminé"
+      ],
+      "codebase_size": "17 fichiers"
+    }
+  },
+  {
+    "id": "undead-rapture",
+    "title": "Undead Rapture",
+    "tagline": "Jeu de stratégie tactique contre des invasions infinies de morts-vivants.",
+    "status": "completed",
+    "progress": 95,
+    "featured": false,
+    "flagship": false,
+    "version": "v1.0.0",
+    "collaboration": "solo",
+    "ai_usage": "none",
+    "image": "",
+    "description": "Jeu tactique en Lua / LÖVE 2D axé sur le placement stratégique de survivants et la gestion de ressources pour résister le plus longtemps possible à l'apocalypse zombie.",
+    "technologies": [
+      "Lua",
+      "LÖVE 2D",
+      "Stratégie",
+      "Survie"
+    ],
     "links": {
       "github": "https://github.com/Anstrum/undead-rapture"
     },
     "dates": {
-      "started": "2023-05",
+      "started": "2023-07",
       "lastUpdate": "2023-07"
     },
     "highlights": [
-      "Vagues infinies à difficulté exponentielle",
-      "Arsenal varié et pièges défensifs à synchroniser"
-    ]
+      "Moteur tactique en temps réel",
+      "Point précis : Boucle de survie complète et équilibrée"
+    ],
+    "detailed_progress": {
+      "current_milestone": "Version jouable complète",
+      "implemented": [
+        "Mécanique de placement des unités",
+        "Comportement d'assaut zombie",
+        "Gestionnaire de défaite et score"
+      ],
+      "next_steps": [
+        "Variantes de zombies spéciaux"
+      ],
+      "codebase_size": "4 fichiers de code Lua"
+    }
+  },
+  {
+    "id": "altars-in-outworld",
+    "title": "Altars in Outworld",
+    "tagline": "MMO indie mystique centré sur la coopération communautaire et l'érection d'autels sacrés.",
+    "status": "paused",
+    "progress": 30,
+    "featured": false,
+    "flagship": false,
+    "version": "v0.2.0-prototype",
+    "collaboration": "solo",
+    "ai_usage": "none",
+    "image": "",
+    "description": "MMO indépendant en JavaScript / Node.js invitant les joueurs à coopérer pour ériger des autels sacrés et participer à une communauté grandissante.",
+    "technologies": [
+      "JavaScript",
+      "Node.js",
+      "WebSockets",
+      "MMO Architecture"
+    ],
+    "links": {
+      "github": "https://github.com/Anstrum/altars-in-outworld"
+    },
+    "dates": {
+      "started": "2023-04",
+      "lastUpdate": "2023-08"
+    },
+    "highlights": [
+      "Point précis : Serveur de synchronisation de base posé, gameplay d'autels en cours de maturation"
+    ],
+    "detailed_progress": {
+      "current_milestone": "Prototype serveur",
+      "implemented": [
+        "Configuration du serveur Node.js",
+        "Protocole d'échange de paquets joueurs"
+      ],
+      "next_steps": [
+        "Création du client graphique",
+        "Système de guildes"
+      ],
+      "codebase_size": "6 fichiers"
+    }
+  },
+  {
+    "id": "aide-geoplanif",
+    "title": "Aide GéoPlanif",
+    "tagline": "Outil de visualisation de données et d'aide à la décision avec Highcharts et filtres avancés.",
+    "status": "completed",
+    "progress": 100,
+    "featured": false,
+    "flagship": false,
+    "version": "v1.0.0",
+    "collaboration": "solo",
+    "ai_usage": "none",
+    "image": "",
+    "description": "Application web interne riche de 162 fichiers permettant de manipuler des plannings, filtrer des ensembles de données et générer des exports visuels par canvas.",
+    "technologies": [
+      "JavaScript",
+      "Highcharts",
+      "HTML5 Canvas",
+      "Data Viz"
+    ],
+    "links": {
+      "github": "https://github.com/Anstrum/aide-geoplanif"
+    },
+    "dates": {
+      "started": "2023-06",
+      "lastUpdate": "2023-06"
+    },
+    "highlights": [
+      "162 fichiers intégrés avec bibliothèques de graphiques et capture d'écran",
+      "Point précis : Outil fonctionnel et utilisé en production interne"
+    ],
+    "detailed_progress": {
+      "current_milestone": "Outil terminé et stable",
+      "implemented": [
+        "Filtrage multi-listes",
+        "Rendu de graphiques dynamiques",
+        "Export d'images haute résolution"
+      ],
+      "next_steps": [
+        "Aucun, application stable"
+      ],
+      "codebase_size": "162 fichiers"
+    }
+  },
+  {
+    "id": "start-docteur-app",
+    "title": "Start Docteur (App Mobile)",
+    "tagline": "Application de santé multiplateforme (iOS, Android, Windows, Web) avec Flutter.",
+    "status": "completed",
+    "progress": 80,
+    "featured": false,
+    "flagship": false,
+    "version": "v0.8.0",
+    "collaboration": "solo",
+    "ai_usage": "none",
+    "image": "",
+    "description": "Application mobile et de bureau multiplateforme développée avec Flutter pour la mise en relation médicale et la gestion de consultations.",
+    "technologies": [
+      "Flutter",
+      "Dart",
+      "C++",
+      "Mobile Multiplateforme"
+    ],
+    "links": {
+      "github": "https://github.com/Anstrum/start-docteur-app"
+    },
+    "dates": {
+      "started": "2023-01",
+      "lastUpdate": "2023-02"
+    },
+    "highlights": [
+      "126 fichiers sources organisés pour déploiement multi-OS",
+      "Point précis : Écrans principaux et structure fonctionnels"
+    ],
+    "detailed_progress": {
+      "current_milestone": "Version bêta fonctionnelle",
+      "implemented": [
+        "Support Android, iOS, Windows et Web",
+        "Écrans d'accueil et de prise de rendez-vous"
+      ],
+      "next_steps": [
+        "Connecteurs API vers backend de production"
+      ],
+      "codebase_size": "126 fichiers"
+    }
+  },
+  {
+    "id": "start-docteur-promotion",
+    "title": "Start Docteur Android (Native)",
+    "tagline": "Application native Android en Kotlin avec architecture MVVM et Jetpack.",
+    "status": "completed",
+    "progress": 80,
+    "featured": false,
+    "flagship": false,
+    "version": "v0.8.0",
+    "collaboration": "solo",
+    "ai_usage": "none",
+    "image": "",
+    "description": "Déclinaison native Android en Kotlin pour le projet Start Docteur, adoptant les principes d'architecture recommandés (ViewModel, LiveData/State, Clean Views).",
+    "technologies": [
+      "Kotlin",
+      "Android Jetpack",
+      "MVVM",
+      "Gradle"
+    ],
+    "links": {
+      "github": "https://github.com/Anstrum/start-docteur-promotion"
+    },
+    "dates": {
+      "started": "2023-01",
+      "lastUpdate": "2023-02"
+    },
+    "highlights": [
+      "40 fichiers de code Kotlin natif avec tests unitaires",
+      "Point précis : Écrans d'accueil HomePageScreen et ViewModel terminés"
+    ],
+    "detailed_progress": {
+      "current_milestone": "Prototype natif Android achevé",
+      "implemented": [
+        "Architecture HomePageViewModel",
+        "UI moderne et fluide en Kotlin natif"
+      ],
+      "next_steps": [
+        "Intégration d'API distante"
+      ],
+      "codebase_size": "40 fichiers"
+    }
+  },
+  {
+    "id": "Portfolio",
+    "title": "Portfolio V1 (Archive)",
+    "tagline": "Première version du portfolio personnel en HTML5/CSS3 natif sur GitHub Pages.",
+    "status": "completed",
+    "progress": 100,
+    "featured": false,
+    "flagship": false,
+    "version": "v1.0.0",
+    "collaboration": "solo",
+    "ai_usage": "none",
+    "image": "",
+    "description": "Version historique du portfolio personnel hébergée sur GitHub Pages, réalisée en HTML et CSS épuré.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "GitHub Pages"
+    ],
+    "links": {
+      "github": "https://github.com/Anstrum/Portfolio"
+    },
+    "dates": {
+      "started": "2023-07",
+      "lastUpdate": "2023-07"
+    },
+    "highlights": [
+      "Point précis : Site complet archivé, remplacé par Nako Vault"
+    ],
+    "detailed_progress": {
+      "current_milestone": "Archivé",
+      "implemented": [
+        "Présentation de projets, responsive design"
+      ],
+      "next_steps": [
+        "Remplacé par la présente plateforme Nako Vault"
+      ],
+      "codebase_size": "4 fichiers"
+    }
+  },
+  {
+    "id": "neon-dash",
+    "title": "Neon Dash",
+    "tagline": "Jeu de plateforme/action 2D en mégapole cyberpunk verticale avec exosquelette modulaire.",
+    "status": "idea",
+    "progress": 15,
+    "featured": false,
+    "flagship": false,
+    "version": "v0.1.0-concept",
+    "collaboration": "solo",
+    "ai_usage": "research",
+    "image": "",
+    "description": "Jeu d'action 2D en low-poly procédural où vous incarnez un coursier clandestin livrant sous haute tension dans une mégapole cyberpunk verticale, propulsé par un exosquelette modulaire.",
+    "technologies": [
+      "Concept",
+      "Game Design",
+      "Cyberpunk",
+      "Génération Procédurale"
+    ],
+    "links": {
+      "github": "https://github.com/Anstrum/neon-dash"
+    },
+    "dates": {
+      "started": "2026-09",
+      "lastUpdate": "2026-09"
+    },
+    "highlights": [
+      "Point précis : Pitch, univers et game design rédigés, en attente d'implémentation de la boucle de gameplay"
+    ],
+    "detailed_progress": {
+      "current_milestone": "Spécifications de game design",
+      "implemented": [
+        "Concept d'exosquelette modulaire et univers cyberpunk"
+      ],
+      "next_steps": [
+        "Prototypage du contrôleur de saut vertical en LÖVE 2D"
+      ],
+      "codebase_size": "Dépôt conceptuel"
+    }
+  },
+  {
+    "id": "Engage",
+    "title": "Engage (Proximity Chat)",
+    "tagline": "Application mobile de chat de proximité pour faciliter les échanges réels.",
+    "status": "idea",
+    "progress": 15,
+    "featured": false,
+    "flagship": false,
+    "version": "v0.1.0-concept",
+    "collaboration": "solo",
+    "ai_usage": "research",
+    "image": "",
+    "description": "Application sociale de proximité permettant d'entrer en contact de manière fluide et sécurisée avec les personnes présentes dans le même espace physique.",
+    "technologies": [
+      "Mobile",
+      "Géolocalisation",
+      "WebSockets",
+      "UI/UX"
+    ],
+    "links": {
+      "github": "https://github.com/Anstrum/Engage"
+    },
+    "dates": {
+      "started": "2023-06",
+      "lastUpdate": "2023-06"
+    },
+    "highlights": [
+      "Point précis : Concept et cas d'usage documentés, prêt pour développement futur"
+    ],
+    "detailed_progress": {
+      "current_milestone": "Conception produit",
+      "implemented": [
+        "Spécifications fonctionnelles"
+      ],
+      "next_steps": [
+        "Développement du MVP"
+      ],
+      "codebase_size": "Dépôt conceptuel"
+    }
   }
 ]
