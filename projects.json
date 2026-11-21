@@ -13,12 +13,14 @@
     "image": "assets/images/owl-emblem.png",
     "description": "Omen Wing Legion [OWL] est mon projet majeur d'envergure. Conçu pour fédérer une communauté passionnée de joueurs, créateurs et développeurs autour d'un univers immersif et d'expériences partagées. L'ambition est d'associer un lore captivant, des bots interactifs, des outils collaboratifs et des modules de jeu sous un même étendard emblématique.",
     "technologies": [
-      "Communauté",
-      "Discord API",
       "Node.js",
       "Lua",
-      "Game Design",
-      "Lore Engine"
+      "Discord API"
+    ],
+    "features": [
+      "Communauté",
+      "Lore Engine",
+      "Game Design"
     ],
     "links": {
       "github": "https://github.com/Anstrum",
@@ -63,7 +65,9 @@
     "description": "Jeu novateur développé en Lua (LÖVE 2D) sous la contrainte stricte d'un rendu 100% vectoriel (aucun asset graphique externe). Le joueur gère une usine logistique d'un côté du mur pour ravitailler en temps réel les tourelles et défenses de l'autre côté.",
     "technologies": [
       "Lua",
-      "LÖVE 2D",
+      "LÖVE 2D"
+    ],
+    "features": [
       "Automatisation",
       "Tower Defense",
       "Rendu Vectoriel"
@@ -110,9 +114,12 @@
     "description": "Mod majeur développé en Java pour Minecraft 1.26.3 NeoForge. Introduit un système complet d'enchantements débridés au niveau 10, 82 sorts uniques rééquilibrés, le système de Transcendance (Table & Cristal de transcendance), des sacs et accessoires dimensionnels, et un atelier de forge complet.",
     "technologies": [
       "Java",
-      "Minecraft NeoForge",
-      "Game Balance",
-      "Modding"
+      "Minecraft NeoForge"
+    ],
+    "features": [
+      "Modding",
+      "RPG & Sorts",
+      "Équilibrage"
     ],
     "links": {
       "github": "https://github.com/Anstrum/chou-chou-mod",
@@ -156,11 +163,15 @@
     "image": "",
     "description": "Portail de documentation web complet pour le mod ChouChou (Jekyll / GitHub Pages). Présente le grimoire des 82 sorts, les formules d'effets, les paliers de puissance, les recettes d'artisanat et les guides de transcendance.",
     "technologies": [
-      "HTML",
-      "CSS",
+      "HTML/CSS",
       "JavaScript",
       "Jekyll",
       "GitHub Pages"
+    ],
+    "features": [
+      "Wiki & Documentation",
+      "Grimoire de sorts",
+      "Guides d'artisanat"
     ],
     "links": {
       "github": "https://github.com/Anstrum/chouchou-mod-wiki"
@@ -202,10 +213,12 @@
     "description": "Jeu hybride temps réel en Lua / LÖVE 2D où deux mécaniques fonctionnent en symbiose continue : gestion incrémentale de villageois arcaniques et défense nocturne de sanctuaire. Intègre une bascule bilingue instantanée Français / Anglais.",
     "technologies": [
       "Lua",
-      "LÖVE 2D",
+      "LÖVE 2D"
+    ],
+    "features": [
       "Tower Defense",
-      "Idle / Incrémental",
-      "Architecture Modulaire"
+      "Gestion / Idle",
+      "Bilingue FR/EN"
     ],
     "links": {
       "github": "https://github.com/Anstrum/archimage-sanctuary-td"
@@ -250,9 +263,11 @@
     "description": "Site vitrine et maquettes interactives en HTML5 / JavaScript pour le collectif Aether Vanguard, comportant un espace de prototypage et de brainstorming.",
     "technologies": [
       "JavaScript",
-      "HTML5",
-      "CSS3",
-      "Web Design"
+      "HTML/CSS"
+    ],
+    "features": [
+      "Brainstorming",
+      "Vitrine Communautaire"
     ],
     "links": {
       "github": "https://github.com/Anstrum/aether-vanguard-website"
@@ -293,10 +308,12 @@
     "description": "Projet Unity ambitieux en 2D coopérative où les joueurs incarnent des avatars sacrés complémentaires pour défendre leur sanctuaire face à des envahisseurs hostiles.",
     "technologies": [
       "Unity",
-      "C#",
-      "Multiplayer Coop",
-      "Animation 2D",
-      "Game Design"
+      "C#"
+    ],
+    "features": [
+      "Coopération 2D",
+      "Die and Retry",
+      "Animation 2D"
     ],
     "links": {
       "github": "https://github.com/Anstrum/Twinned-Spirits"
@@ -339,9 +356,12 @@
     "description": "Jeu tactique en Lua / LÖVE 2D axé sur le placement stratégique de survivants et la gestion de ressources pour résister le plus longtemps possible à l'apocalypse zombie.",
     "technologies": [
       "Lua",
-      "LÖVE 2D",
-      "Stratégie",
-      "Survie"
+      "LÖVE 2D"
+    ],
+    "features": [
+      "Survie & Stratégie",
+      "Zombies",
+      "Gestion de Ressources"
     ],
     "links": {
       "github": "https://github.com/Anstrum/undead-rapture"
@@ -382,9 +402,12 @@
     "description": "Application sociale de proximité permettant d'entrer en contact de manière fluide et sécurisée avec les personnes présentes dans le même espace physique.",
     "technologies": [
       "Mobile",
+      "WebSockets"
+    ],
+    "features": [
+      "Chat de Proximité",
       "Géolocalisation",
-      "WebSockets",
-      "UI/UX"
+      "Réseau Social"
     ],
     "links": {
       "github": "https://github.com/Anstrum/Engage"
@@ -415,16 +438,20 @@
     "progress": 100,
     "featured": true,
     "flagship": false,
-    "version": "v1.1.0",
+    "version": "v1.2.0",
     "collaboration": "solo",
     "ai_usage": "assisted-code",
     "image": "assets/images/nako-logo.png",
-    "description": "Site vitrine et catalogue interactif hébergé sur GitHub Pages permettant d'explorer l'intégralité des projets avec des filtres multicritères par toggles catégorisés (statut, utilisation de l'IA, technologies, collaboration), recherche instantanée et bascule de thème sombre/clair.",
+    "description": "Site vitrine et catalogue interactif hébergé sur GitHub Pages permettant d'explorer l'intégralité des projets avec des filtres multicritères par toggles catégorisés (statut, utilisation de l'IA, technologies, genres/features, collaboration), recherche instantanée et bascule de thème sombre/clair.",
     "technologies": [
-      "HTML5",
-      "CSS3 Modern",
-      "Vanilla JavaScript",
+      "HTML/CSS",
+      "JavaScript",
       "GitHub Pages"
+    ],
+    "features": [
+      "Filtres Avancés & Popup",
+      "Mode Sombre/Clair",
+      "Générateur JSON"
     ],
     "links": {
       "github": "https://github.com/Anstrum/Nako-Github-Wiki",
@@ -436,20 +463,19 @@
     },
     "highlights": [
       "Zéro étape de build, hébergement natif et instantané sur GitHub Pages",
-      "Optimisation mobile parfaite (responsive sans aucun débordement horizontal)",
-      "Système de filtres par toggles catégorisés réactifs (Logique ET multi-facettes)",
+      "Système de filtres par tiroir/popup mobile-friendly avec distinction Technos vs Features",
       "Design soigné combinant l'ambiance Nako (Crimson) et OWL (Cyber Teal)",
       "Générateur de projet JSON intégré pour des ajouts rapides en un clic"
     ],
     "detailed_progress": {
-      "current_milestone": "v1.1.0 (Audit complet & Optimisation Mobile)",
+      "current_milestone": "v1.2.0 (Filtres Avancés & Popup Mobile)",
       "implemented": [
-        "Synchronisation avec les dépôts réels d'Anstrum",
-        "Layout mobile 100% responsive",
-        "Affichage des jalons et détails d'avancement par projet"
+        "Séparation propre Technos vs Features/Genres",
+        "Modal/Drawer dédié pour le paramétrage des filtres sur mobile",
+        "Affichage immédiat des badges de filtres actifs"
       ],
       "next_steps": [
-        "Mises à jour au fur et à mesure des nouveaux projets"
+        "Mises à jour au fil des futures versions de jeux"
       ],
       "codebase_size": "9 fichiers (Architecture native Vanilla)"
     }

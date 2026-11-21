@@ -1,7 +1,7 @@
 /**
  * NAKO // PROJECT VAULT & OWL ARCHIVES
  * Moteur JavaScript natif (Zéro dépendance)
- * Gestion du JSON, filtres par toggles catégorisés, recherche, thème et modals
+ * Gestion du JSON, filtres par toggles catégorisés, recherche, popup mobile, thème et modals
  */
 
 (() => {
@@ -15,7 +15,8 @@
       status: 'all',
       ai: 'all',
       collaboration: 'all',
-      technology: 'all'
+      technology: 'all',
+      feature: 'all'
     },
     theme: localStorage.getItem('nako-theme') || 'dark',
     selectedProject: null
@@ -50,6 +51,18 @@
     resultsCount: document.getElementById('results-count'),
     projectsGrid: document.getElementById('projects-grid'),
     
+    // Bouton modal filtres & badges
+    openFiltersModalBtn: document.getElementById('open-filters-modal-btn'),
+    filterActiveCountBadge: document.getElementById('filter-active-count-badge'),
+    activeFiltersChipsBar: document.getElementById('active-filters-chips-bar'),
+
+    // Modal filtres
+    filterModal: document.getElementById('filter-modal'),
+    filterModalClose: document.getElementById('filter-modal-close'),
+    modalMatchCount: document.getElementById('modal-match-count'),
+    modalResetBtn: document.getElementById('modal-reset-btn'),
+    modalApplyBtn: document.getElementById('modal-apply-btn'),
+
     // KPI counters
     kpiTotal: document.getElementById('kpi-total'),
     kpiInProgress: document.getElementById('kpi-in-progress'),
@@ -60,8 +73,9 @@
     togglesAi: document.getElementById('toggles-ai'),
     togglesCollab: document.getElementById('toggles-collab'),
     togglesTech: document.getElementById('toggles-tech'),
+    togglesFeature: document.getElementById('toggles-feature'),
 
-    // Modals
+    // Modals détails et générateur
     detailModal: document.getElementById('detail-modal'),
     detailModalClose: document.getElementById('detail-modal-close'),
     detailModalContent: document.getElementById('detail-modal-content'),
@@ -160,7 +174,7 @@
       { key: 'team', label: 'En équipe', icon: '👥' }
     ]);
 
-    // 4. Toggles Technologies (dynamique selon ce qui est dans projects.json)
+    // 4. Toggles Technologies (Langages purs & Frameworks)
     const techCounts = {};
     state.projects.forEach(p => {
       (p.technologies || []).forEach(t => {
@@ -170,11 +184,28 @@
 
     const sortedTechs = Object.entries(techCounts)
       .sort((a, b) => b[1] - a[1])
-      .map(([tech, count]) => ({ key: tech, label: tech, count }));
+      .map(([tech, count]) => ({ key: tech, label: tech, count, icon: '💻' }));
 
     renderCategoryToggles(elements.togglesTech, 'technology', [
       { key: 'all', label: 'Tous', icon: '✦' },
       ...sortedTechs
+    ]);
+
+    // 5. Toggles Features / Genres (Mécaniques de jeu, concepts)
+    const featureCounts = {};
+    state.projects.forEach(p => {
+      (p.features || []).forEach(f => {
+        featureCounts[f] = (featureCounts[f] || 0) + 1;
+      });
+    });
+
+    const sortedFeatures = Object.entries(featureCounts)
+      .sort((a, b) => b[1] - a[1])
+      .map(([feat, count]) => ({ key: feat, label: feat, count, icon: '🎮' }));
+
+    renderCategoryToggles(elements.togglesFeature, 'feature', [
+      { key: 'all', label: 'Tous', icon: '✦' },
+      ...sortedFeatures
     ]);
   }
 
@@ -196,6 +227,8 @@
                 if (categoryKey === 'status') return p.status === item.key;
                 if (categoryKey === 'ai') return p.ai_usage === item.key;
                 if (categoryKey === 'collaboration') return p.collaboration === item.key;
+                if (categoryKey === 'technology') return (p.technologies || []).includes(item.key);
+                if (categoryKey === 'feature') return (p.features || []).includes(item.key);
                 return false;
               }).length);
 
@@ -213,7 +246,6 @@
   }
 
   function handleToggleClick(categoryKey, value) {
-    // Si on reclique sur le même, on revient à 'all'
     if (state.filters[categoryKey] === value && value !== 'all') {
       state.filters[categoryKey] = 'all';
     } else {
@@ -221,10 +253,11 @@
     }
     updateTogglesVisualState();
     renderProjects();
+    updateModalMatchCount();
   }
 
   function updateTogglesVisualState() {
-    ['status', 'ai', 'collaboration', 'technology'].forEach(cat => {
+    ['status', 'ai', 'collaboration', 'technology', 'feature'].forEach(cat => {
       const container = getContainerForCategory(cat);
       if (!container) return;
       const btns = container.querySelectorAll('.toggle-btn');
@@ -243,20 +276,22 @@
     if (cat === 'ai') return elements.togglesAi;
     if (cat === 'collaboration') return elements.togglesCollab;
     if (cat === 'technology') return elements.togglesTech;
+    if (cat === 'feature') return elements.togglesFeature;
     return null;
   }
 
   // Filtrage des projets
   function getFilteredProjects() {
     return state.projects.filter(p => {
-      // 1. Recherche texte (titre, tagline, description, technos)
+      // 1. Recherche texte (titre, tagline, description, technos, features)
       if (state.filters.search) {
         const q = state.filters.search.toLowerCase();
         const inTitle = (p.title || '').toLowerCase().includes(q);
         const inTagline = (p.tagline || '').toLowerCase().includes(q);
         const inDesc = (p.description || '').toLowerCase().includes(q);
         const inTech = (p.technologies || []).some(t => t.toLowerCase().includes(q));
-        if (!inTitle && !inTagline && !inDesc && !inTech) return false;
+        const inFeat = (p.features || []).some(f => f.toLowerCase().includes(q));
+        if (!inTitle && !inTagline && !inDesc && !inTech && !inFeat) return false;
       }
 
       // 2. Filtre Statut
@@ -279,8 +314,103 @@
         return false;
       }
 
+      // 6. Filtre Feature / Genre
+      if (state.filters.feature !== 'all' && !(p.features || []).includes(state.filters.feature)) {
+        return false;
+      }
+
       return true;
     });
+  }
+
+  // Rendu de la barre des filtres actifs (Chips) & badge
+  function renderActiveFiltersBar() {
+    let activeCount = 0;
+    const chips = [];
+
+    if (state.filters.search) {
+      activeCount++;
+      chips.push({ label: `"${state.filters.search}"`, key: 'search', reset: () => { state.filters.search = ''; if (elements.searchInput) elements.searchInput.value = ''; } });
+    }
+
+    if (state.filters.status !== 'all') {
+      activeCount++;
+      const s = STATUS_CONFIG[state.filters.status];
+      chips.push({ label: `${s?.icon || '📌'} ${s?.label || state.filters.status}`, key: 'status', reset: () => { state.filters.status = 'all'; } });
+    }
+
+    if (state.filters.ai !== 'all') {
+      activeCount++;
+      const a = AI_CONFIG[state.filters.ai];
+      chips.push({ label: `${a?.icon || '🤖'} ${a?.label || state.filters.ai}`, key: 'ai', reset: () => { state.filters.ai = 'all'; } });
+    }
+
+    if (state.filters.collaboration !== 'all') {
+      activeCount++;
+      const c = COLLAB_CONFIG[state.filters.collaboration];
+      chips.push({ label: `${c?.icon || '👤'} ${c?.label || state.filters.collaboration}`, key: 'collaboration', reset: () => { state.filters.collaboration = 'all'; } });
+    }
+
+    if (state.filters.technology !== 'all') {
+      activeCount++;
+      chips.push({ label: `💻 ${state.filters.technology}`, key: 'technology', reset: () => { state.filters.technology = 'all'; } });
+    }
+
+    if (state.filters.feature !== 'all') {
+      activeCount++;
+      chips.push({ label: `🎮 ${state.filters.feature}`, key: 'feature', reset: () => { state.filters.feature = 'all'; } });
+    }
+
+    // Badge sur le bouton "Filtrer"
+    if (elements.filterActiveCountBadge) {
+      if (activeCount > 0) {
+        elements.filterActiveCountBadge.textContent = activeCount;
+        elements.filterActiveCountBadge.style.display = 'inline-flex';
+      } else {
+        elements.filterActiveCountBadge.style.display = 'none';
+      }
+    }
+
+    // Bouton effacer rapide
+    if (elements.resetFiltersBtn) {
+      elements.resetFiltersBtn.style.display = activeCount > 0 ? 'inline-flex' : 'none';
+    }
+
+    // Barre de chips cliquables
+    if (elements.activeFiltersChipsBar) {
+      if (chips.length > 0) {
+        elements.activeFiltersChipsBar.innerHTML = chips.map((c, i) => `
+          <button class="active-filter-chip" data-chip-idx="${i}" title="Supprimer ce filtre">
+            <span>${c.label}</span>
+            <span class="chip-remove">✕</span>
+          </button>
+        `).join('');
+
+        elements.activeFiltersChipsBar.querySelectorAll('.active-filter-chip').forEach(btn => {
+          btn.addEventListener('click', (e) => {
+            const idx = parseInt(e.currentTarget.dataset.chipIdx, 10);
+            if (chips[idx]) {
+              chips[idx].reset();
+              updateTogglesVisualState();
+              renderProjects();
+              updateModalMatchCount();
+            }
+          });
+        });
+      } else {
+        elements.activeFiltersChipsBar.innerHTML = '';
+      }
+    }
+  }
+
+  function updateModalMatchCount() {
+    const filtered = getFilteredProjects();
+    if (elements.modalMatchCount) {
+      elements.modalMatchCount.textContent = `${filtered.length} projet${filtered.length > 1 ? 's' : ''} correspondant${filtered.length > 1 ? 's' : ''}`;
+    }
+    if (elements.modalApplyBtn) {
+      elements.modalApplyBtn.textContent = `Afficher les ${filtered.length} projets ➔`;
+    }
   }
 
   // Rendu de la grille de projets
@@ -288,7 +418,10 @@
     if (!elements.projectsGrid) return;
     const filtered = getFilteredProjects();
 
-    // Mise à jour du compteur de résultats
+    renderActiveFiltersBar();
+    updateModalMatchCount();
+
+    // Compteur de résultats
     if (elements.resultsCount) {
       elements.resultsCount.textContent = `Affichage de ${filtered.length} sur ${state.projects.length} projets`;
     }
@@ -298,8 +431,8 @@
         <div class="empty-state">
           <div class="empty-state-icon">🔍</div>
           <h3 class="empty-state-title">Aucun projet ne correspond à vos filtres</h3>
-          <p class="empty-state-desc">Essayez de réinitialiser la recherche ou de changer les toggles sélectionnés.</p>
-          <button class="reset-filters-btn" id="inline-reset-btn">✕ Tout réinitialiser</button>
+          <p class="empty-state-desc">Essayez de réinitialiser la recherche ou de changer les réglages du panneau de filtres.</p>
+          <button class="reset-filters-btn" id="inline-reset-btn" style="display: inline-flex;">✕ Tout réinitialiser</button>
         </div>
       `;
       const inlineReset = document.getElementById('inline-reset-btn');
@@ -308,8 +441,6 @@
     }
 
     elements.projectsGrid.innerHTML = filtered.map(p => createProjectCardHtml(p)).join('');
-
-    // Attachement des événements sur les cartes
     attachCardEvents();
   }
 
@@ -339,7 +470,12 @@
 
     // Tags technologiques
     const techTagsHtml = (project.technologies || []).map(t => `
-      <button class="tech-tag-btn" data-tech="${t}">${t}</button>
+      <button class="tech-tag-btn" data-tech="${t}">💻 ${t}</button>
+    `).join('');
+
+    // Tags features / genres
+    const featureTagsHtml = (project.features || []).map(f => `
+      <button class="feature-tag-btn" data-feature="${f}">🎮 ${f}</button>
     `).join('');
 
     // Liens utiles
@@ -350,7 +486,7 @@
         </a>`
       : '';
 
-    const demoLink = project.links && project.links.demo
+    const demoLink = project.links && project.links.demo 
       ? `<a href="${project.links.demo}" target="_blank" rel="noopener noreferrer" class="card-link-btn" title="Démo en ligne">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
           Démo
@@ -393,6 +529,7 @@
 
           <div class="card-tech-chips">
             ${techTagsHtml}
+            ${featureTagsHtml}
           </div>
 
           <div class="card-actions-row">
@@ -416,11 +553,21 @@
       });
     });
 
-    // Clic sur tag techno pour filtrer directement
+    // Clic sur tag techno
     document.querySelectorAll('.tech-tag-btn').forEach(btn => {
       btn.addEventListener('click', (e) => {
         const tech = e.currentTarget.dataset.tech;
         state.filters.technology = tech;
+        updateTogglesVisualState();
+        renderProjects();
+      });
+    });
+
+    // Clic sur tag feature
+    document.querySelectorAll('.feature-tag-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const feat = e.currentTarget.dataset.feature;
+        state.filters.feature = feat;
         updateTogglesVisualState();
         renderProjects();
       });
@@ -450,7 +597,11 @@
     ` : '';
 
     const techChipsHtml = (project.technologies || []).map(t => `
-      <span class="tech-chip">${t}</span>
+      <span class="tech-chip">💻 ${t}</span>
+    `).join('');
+
+    const featChipsHtml = (project.features || []).map(f => `
+      <span class="feature-chip">🎮 ${f}</span>
     `).join('');
 
     elements.detailModalContent.innerHTML = `
@@ -508,9 +659,14 @@
       ` : ''}
 
       <div>
-        <h4 class="modal-section-title">Technologies Utilisées</h4>
-        <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+        <h4 class="modal-section-title">Technologies & Moteurs</h4>
+        <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px;">
           ${techChipsHtml}
+        </div>
+
+        <h4 class="modal-section-title">Genres & Mécaniques de Jeu</h4>
+        <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+          ${featChipsHtml}
         </div>
       </div>
 
@@ -525,6 +681,20 @@
 
   function closeDetailModal() {
     if (elements.detailModal) elements.detailModal.classList.remove('open');
+  }
+
+  // Modal Filtres
+  function openFilterModal() {
+    if (elements.filterModal) {
+      updateModalMatchCount();
+      elements.filterModal.classList.add('open');
+    }
+  }
+
+  function closeFilterModal() {
+    if (elements.filterModal) {
+      elements.filterModal.classList.remove('open');
+    }
   }
 
   // Modal Générateur JSON
@@ -556,7 +726,8 @@
       ai_usage: form.pAi.value,
       image: form.pImage.value || '',
       description: form.pDesc.value || 'Description complète du projet...',
-      technologies: (form.pTech.value || 'JavaScript, HTML, CSS').split(',').map(s => s.trim()).filter(Boolean),
+      technologies: (form.pTech.value || 'Lua, LÖVE 2D').split(',').map(s => s.trim()).filter(Boolean),
+      features: ['Nouveau Genre', 'Mécanique Clé'],
       links: {
         github: form.pGithub.value || 'https://github.com/Anstrum',
         demo: form.pDemo.value || ''
@@ -594,11 +765,13 @@
       status: 'all',
       ai: 'all',
       collaboration: 'all',
-      technology: 'all'
+      technology: 'all',
+      feature: 'all'
     };
     if (elements.searchInput) elements.searchInput.value = '';
     updateTogglesVisualState();
     renderProjects();
+    updateModalMatchCount();
   }
 
   // Configuration des écouteurs d'événements
@@ -608,7 +781,7 @@
       elements.themeToggleBtn.addEventListener('click', toggleTheme);
     }
 
-    // Recherche avec debounce léger
+    // Recherche avec mise à jour en direct
     if (elements.searchInput) {
       elements.searchInput.addEventListener('input', (e) => {
         state.filters.search = e.target.value.trim();
@@ -616,7 +789,30 @@
       });
     }
 
-    // Bouton Réinitialiser
+    // Bouton Ouvrir Modal Filtres
+    if (elements.openFiltersModalBtn) {
+      elements.openFiltersModalBtn.addEventListener('click', openFilterModal);
+    }
+
+    // Bouton Fermer Modal Filtres
+    if (elements.filterModalClose) {
+      elements.filterModalClose.addEventListener('click', closeFilterModal);
+    }
+    if (elements.modalApplyBtn) {
+      elements.modalApplyBtn.addEventListener('click', closeFilterModal);
+    }
+    if (elements.modalResetBtn) {
+      elements.modalResetBtn.addEventListener('click', () => {
+        resetAllFilters();
+      });
+    }
+    if (elements.filterModal) {
+      elements.filterModal.addEventListener('click', (e) => {
+        if (e.target === elements.filterModal) closeFilterModal();
+      });
+    }
+
+    // Bouton Réinitialiser rapide sur la barre principale
     if (elements.resetFiltersBtn) {
       elements.resetFiltersBtn.addEventListener('click', resetAllFilters);
     }
@@ -654,6 +850,7 @@
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
         closeDetailModal();
+        closeFilterModal();
         closeNewProjectModal();
       }
     });
